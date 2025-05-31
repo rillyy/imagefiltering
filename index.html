@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Filter App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Image Filter App</h1>
+        </div>
+        <nav>
+            <a href="#" id="homeLink">Home</a>
+            <a href="#" id="filterLink">Filter Studio</a>
+            <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+
+        </nav>
+    </header>
+    
+    <div class="container">
+        <!-- Home Page -->
+        <section id="home">
+            <div class="hero">
+                <h2 class="cute-heading">Transform Your Photos with Creative Filters</h2>
+                <p>Upload your images and apply various filters to create stunning visual effects. Simple, fast, and completely free to use!</p>
+                <a href="#" class="cta-button" id="startButton">Get Started</a>
+            </div>
+            
+            <div class="features">
+                <div class="feature">
+                    <h3>Easy to Use</h3>
+                    <p>Just upload your image and start applying filters with our intuitive interface.</p>
+                </div>
+                <div class="feature">
+                    <h3>Multiple Filters</h3>
+                    <p>Choose from a variety of filters and customize their parameters to achieve the perfect look.</p>
+                </div>
+                <div class="feature">
+                    <h3>Save & Share</h3>
+                    <p>Download your edited image and share it with friends on social media.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Filter Page -->
+        <section id="filter">
+            <div class="filter-container">
+                <div class="upload-section">
+                    <h2>Upload Your Image</h2>
+                    <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                    <button class="upload-btn" id="uploadButton">Choose Image</button>
+                </div>
+                
+                <div class="controls-section">
+                    <h3>Filter Controls</h3>
+                    
+                    <div class="filter-control">
+                        <label for="brightness">Brightness <span class="value" id="brightnessValue">100%</span></label>
+                        <input type="range" id="brightness" min="0" max="200" value="100">
+                    </div>
+                    
+                    <div class="filter-control">
+                        <label for="contrast">Contrast <span class="value" id="contrastValue">100%</span></label>
+                        <input type="range" id="contrast" min="0" max="200" value="100">
+                    </div>
+                    
+                    <div class="filter-control">
+                        <label for="saturation">Saturation <span class="value" id="saturationValue">100%</span></label>
+                        <input type="range" id="saturation" min="0" max="200" value="100">
+                    </div>
+                    
+                    <div class="filter-control">
+                        <label for="grayscale">Grayscale <span class="value" id="grayscaleValue">0%</span></label>
+                        <input type="range" id="grayscale" min="0" max="100" value="0">
+                    </div>
+                    
+                    <div class="filter-control">
+                        <label for="blur">Blur <span class="value" id="blurValue">0px</span></label>
+                        <input type="range" id="blur" min="0" max="10" value="0">
+                    </div>
+                    
+                    <div class="filter-control">
+                        <label for="hueRotate">Hue Rotate <span class="value" id="hueRotateValue">0°</span></label>
+                        <input type="range" id="hueRotate" min="0" max="360" value="0">
+                    </div>
+                    
+                    <div class="filter-presets">
+                        <h3>Presets</h3>
+                        <button class="preset-btn" data-preset="vintage">Vintage</button>
+                        <button class="preset-btn" data-preset="sepia">Sepia</button>
+                        <button class="preset-btn" data-preset="dramatic">Dramatic</button>
+                        <button class="preset-btn" data-preset="cool">Cool</button>
+                        <button class="preset-btn" data-preset="warm">Warm</button>
+                    </div>
+                </div>
+                
+                <div class="canvas-section">
+                    <canvas id="imageCanvas"></canvas>
+                    <div class="no-image-placeholder" id="placeholder">
+                        <i>📷</i>
+                        <p>No image uploaded yet</p>
+                        <p>Upload an image to get started</p>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="action-btn reset-btn" id="resetButton">Reset Filters</button>
+                        <button class="action-btn download-btn" id="downloadButton">Download Image</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
