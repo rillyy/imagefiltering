@@ -28,7 +28,7 @@ body {
 
 
 header {
-    background-color: #ff69aa;
+    background-color: #69ebff;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -80,7 +80,7 @@ nav a:hover {
 
 .cta-button {
     display: inline-block;
-    background-color: #67d0f9;
+    background-color: #f9e167;
     color: white;
     padding: 12px 30px;
     border-radius: 25px;
